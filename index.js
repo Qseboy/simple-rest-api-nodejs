@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const router = require("./router.js");
+const router = require("./routes/router.js");
 const fileUpload = require("express-fileupload");
 
 const app = express();

@@ -1,12 +1,11 @@
-const Post = require("./Post");
-const PostService = require("./PostService");
+const Post = require("../models/Post");
+const PostService = require("../services/PostService");
 
 
 //crud
 class PostController {
     async create(req, res) {
         try {
-            console.log(req.files);
             const post = await PostService.create(req.body, req.files.picture);
             res.json(post);
         } catch(e) {
